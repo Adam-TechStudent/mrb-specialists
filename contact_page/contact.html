@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="MRB Specialists provides Manufacturing Record Book (MRB) services including MRB compilation, gap analysis, correction support, and submission assistance in Pune, Maharashtra, India.">
+    <meta name="keywords"
+        content="MRB specialists, MRB services, Manufacturing Record Book, MRB compilation, MRB gap analysis, Pune, Maharashtra">
+    <meta name="author" content="MRB Specialists">
+    <meta name="robots" content="index, follow">
+
+    <title>Contact MRB Specialists | Manufacturing Record Book Support </title>
+
+    <!-- Open Graph / Social sharing -->
+    <meta property="og:title" content="MRB Specialists | Manufacturing Record Book Services">
+    <meta property="og:description"
+        content="MRB Specialists provides Manufacturing Record Book (MRB) services including MRB compilation, gap analysis, correction support, and submission assistance.">
+    <meta property="og:url" content="https://yourdomain.com/home_page.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://yourdomain.com/assets/og-image.jpg">
+
+    <!-- DOMAIN ADD HERE UPSIDE -->
+    <!-- Favicon (optional but recommended) -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 100px auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            z-index: 999;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 10px 0 auto;
+            padding: 1rem 1rem 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .nav-logo h1 {
+            font-size: 1.8rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: #374151;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            transition: background-color 0.2s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-link:hover {
+            color: #1e40af;
+            background: rgba(59, 130, 246, 0.1);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            gap: 4px;
+        }
+
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 3px;
+            background: #374151;
+            border-radius: 2px;
+        }
+
+        /* ✅ GOOGLE TRANSLATE BUTTON - FIXED & VISIBLE */
+        #google_translate_element {
+            margin-left: 1rem !important;
+            display: inline-block !important;
+            white-space: nowrap !important;
+        }
+
+        .goog-te-gadget {
+            font-family: inherit !important;
+            border: none !important;
+            background: transparent !important;
+            white-space: nowrap !important;
+        }
+
+        .goog-te-combo {
+            background: linear-gradient(135deg, #3b82f6, #1e40af) !important;
+            border: 2px solid #3b82f6 !important;
+            border-radius: 25px !important;
+            padding: 8px 16px !important;
+            color: white !important;
+            font-weight: 600 !important;
+            font-size: 14px !important;
+            cursor: pointer !important;
+            min-width: 90px !important;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3) !important;
+            font-family: inherit !important;
+        }
+
+        .goog-te-combo:hover {
+            background: linear-gradient(135deg, #1e40af, #1e3c72) !important;
+            transform: translateY(-1px) !important;
+        }
+
+        .goog-te-gadget img {
+            display: none !important;
+        }
+
+        section {
+            margin: 30px 0;
+        }
+
+        .company-info {
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        form {
+            display: grid;
+            gap: 15px;
+        }
+
+        input,
+        textarea,
+        select {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background: #ff8c00;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #e67e00;
+        }
+
+        .success {
+            color: green;
+            display: none;
+        }
+
+        .error {
+            color: red;
+            display: none;
+        }
+
+        .services {
+            display: grid;
+            gap: 10px;
+        }
+
+
+        /* Footer */
+        .footer {
+            background: #111827;
+            color: white;
+            padding: 25px 25px 25px 25px;
+        }
+
+        .footer-content {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .footer-content h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .footer-content p {
+            color: #9ca3af;
+            font-size: 1.1rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 2rem;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            color: #6b7280;
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            #google_translate_element {
+                margin: 10px auto !important;
+                display: block !important;
+                width: 100% !important;
+                text-align: center !important;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .nav-container {
+                padding: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Social Media Label Section -->
+    <div style="position: fixed; top: 190px; left: 0; z-index: 9999; background-color: #547cff; color: white; padding: 10px 5px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; transition: all 0.3s ease; display: flex; align-items: center; font-family: 'Poppins', sans-serif; font-weight: 500; cursor: pointer;"
+        onmouseover="document.getElementById('socialLinks').style.display='flex';"
+        onmouseout="document.getElementById('socialLinks').style.display='none';">
+
+        <!-- Social Icons (hidden by default, visible on hover) -->
+        <div id="socialLinks"
+            style="display: none; flex-direction: column; align-items: center; gap: 5px; margin-right: 10px;">
+            <a href="#linkedin" target="_blank"
+                style="color: white; display: flex; justify-content: center; align-items: center; width: 25px; height: 25px; background-color: black; border-radius: 8px; font-size: 12px; transition: all 0.3s ease;">
+                <i class="bx bxl-linkedin"></i>
+            </a>
+            <a href="#instagram" target="_blank"
+                style="color: white; display: flex; justify-content: center; align-items: center; width: 25px; height: 25px; background-color: black; border-radius: 8px; font-size: 12px; transition: all 0.3s ease;">
+                <i class="bx bxl-instagram"></i>
+            </a>
+            <a href="#facebook" target="_blank"
+                style="color: white; display: flex; justify-content: center; align-items: center; width: 25px; height: 25px; background-color: black; border-radius: 8px; font-size: 12px; transition: all 0.3s ease;">
+                <i class="bx bxl-facebook"></i>
+            </a>
+            <a href="#youtube" target="_blank"
+                style="color: white; display: flex; justify-content: center; align-items: center; width: 25px; height: 25px; background-color: black; border-radius: 8px; font-size: 12px; transition: all 0.3s ease;">
+                <i class="bx bxl-youtube"></i>
+            </a>
+        </div>
+
+        <!-- Follow Us Text (always visible) -->
+        <span id="followText"
+            style="writing-mode: vertical-rl; transform: rotate(180deg); font-size: 14px; font-weight:bold">Follow
+            Us</span>
+    </div>
+
+    <header>
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1>MRB Specialists</h1>
+                </div>
+                <div class="nav-menu" id="navMenu">
+                    <a href="../home_page/home_page.html" class="nav-link">Home</a>
+                    <a href="../service page/service_page.html" class="nav-link">Services</a>
+                    <a href="../about_page/about.html" class="nav-link">About</a>
+                    <a href="../contact_page/contact.html" class="nav-link">Contact</a>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <!-- ✅ LANGUAGE BUTTON - NOW VISIBLE -->
+                <div id="google_translate_element"></div>
+            </div>
+        </nav>
+
+    </header>
+
+
+    <section class="container">
+        <h2>Get MRB Support</h2>
+        <form id="contact-form">
+            <input type="text" name="user_name" placeholder="Your Name" required>
+            <input type="email" name="user_email" placeholder="Your Email" required>
+            <select name="service_type" required>
+                <option value="">Select Service</option>
+                <option value="Complete MRB Compilation">Complete MRB Compilation</option>
+                <option value="MRB Gap Analysis & Correction">MRB Gap Analysis & Correction</option>
+                <option value="Submission Support">Submission Support</option>
+                <option value="Other Inquiry">Other Inquiry</option>
+            </select>
+            <textarea name="message" rows="6" placeholder="Describe your MRB requirements or project details..."
+                required></textarea>
+            <button type="submit">Send MRB Inquiry</button>
+            <p class="success" id="success">Thank you! Your MRB inquiry has been sent. We'll respond soon.</p>
+            <p class="error" id="error">Failed to send. Please try again.</p>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h1>MRB Specialists</h1>
+            <p>Manufacturing Record Book Services | Pune, Maharashtra, India</p>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 All rights reserved.</p>
+            <p>📧 contact@mrbspecialists.com | 📞 +91 98765 43210</p>
+        </div>
+
+    </footer>
+
+    <script type="text/javascript">
+        (function () {
+            // Replace with your EmailJS PUBLIC_KEY from dashboard.emailjs.com/admin/account
+            emailjs.init("MxB2oxdEYhvBErbwX");
+        })();
+
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                // Replace SERVICE_ID, TEMPLATE_ID from your EmailJS dashboard
+                emailjs.sendForm('service_fzb76fm', 'template_mp1q6tp', this)
+                    .then(function () {
+                        document.getElementById('success').style.display = 'block';
+                        document.getElementById('error').style.display = 'none';
+                        this.reset(); // Clear form
+                    }, function (error) {
+                        console.log('FAILED...', error);
+                        document.getElementById('error').style.display = 'block';
+                        document.getElementById('success').style.display = 'none';
+                    });
+            });
+        }
+    </script>
+</body>
+
+</html>

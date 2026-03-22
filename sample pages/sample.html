@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Switch - CORS Fixed ✅</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        header {
+            background: linear-gradient(45deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .lang-selector {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            padding: 20px;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+        }
+        .lang-btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: white;
+            font-size: 16px;
+        }
+        .lang-btn[data-lang="en"] { background: #ff6b6b; }
+        .lang-btn[data-lang="de"] { background: #4ecdc4; }
+        .lang-btn[data-lang="ja"] { background: #45b7d1; }
+        .lang-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+        .lang-btn.active { filter: brightness(1.2); }
+        
+        .content {
+            padding: 40px;
+            line-height: 1.8;
+        }
+        h1 { font-size: 2.5em; margin-bottom: 10px; }
+        h2 { color: #333; margin: 30px 0 20px; font-size: 1.8em; }
+        p { margin-bottom: 20px; font-size: 1.1em; }
+        .quote {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            font-style: italic;
+            font-size: 1.3em;
+        }
+        ul { padding-left: 30px; }
+        li { margin-bottom: 12px; font-size: 1.1em; }
+        
+        .status {
+            padding: 15px 25px;
+            margin: 20px 0;
+            border-radius: 10px;
+            font-weight: bold;
+            text-align: center;
+            display: none;
+        }
+        .loading { background: #fff3cd; color: #856404; }
+        .error { background: #f8d7da; color: #721c24; }
+        .success { background: #d4edda; color: #155724; }
+        
+        .working-now { 
+            position: fixed; 
+            top: 20px; 
+            right: 20px; 
+            background: #10b981; 
+            color: white; 
+            padding: 10px 20px; 
+            border-radius: 25px; 
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
+    </style>
+</head>
+<body>
+    <div class="working-now">✅ CORS Fixed - Working Now!</div>
+    
+    <div class="container">
+        <header>
+            <h1 id="title">🌟 Welcome to Multi-Language Demo</h1>
+            <div class="lang-selector">
+                <button class="lang-btn active" data-lang="en">🇺🇸 English</button>
+                <button class="lang-btn" data-lang="de">🇩🇪 Deutsch</button>
+                <button class="lang-btn" data-lang="ja">🇯🇵 日本語</button>
+            </div>
+        </header>
+        
+        <div class="status" id="status"></div>
+        
+        <div class="content">
+            <h2 id="subtitle">🚀 Discover Amazing Facts</h2>
+            <p id="fact1">The universe expands faster than light, causing distant galaxies to appear to move away from us at incredible speeds.</p>
+            
+            <div class="quote" id="quote">
+                "Innovation distinguishes between a leader and a follower." – Steve Jobs
+            </div>
+            
+            <p id="fact2">Octopuses have three hearts: two pump blood through the gills, one to the rest of the body.</p>
+            <p id="fact3">Honey never spoils. Archaeologists found edible honey in Egyptian tombs over 3,000 years old!</p>
+            
+            <ul>
+                <li id="list1">💻 Tech tip: Use semantic HTML for better accessibility and SEO.</li>
+                <li id="list2">🍌 Fun fact: Bananas are berries, strawberries are not!</li>
+                <li id="list3">⚡ Pro tip: Stay hydrated during coding marathons! 💧</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // 🔧 CORS-FIXED: Using reliable public instance + fallback
+        const TRANSLATE_URL = 'https://libretranslate.de/translate';
+        // Backup URLs if primary fails
+        const BACKUP_URLS = [
+            'https://translate.argosopentech.com/translate',
+            'https://api.libretranslate.com/translate'
+        ];
+        
+        const langs = { en: 'en', de: 'de', ja: 'ja' };
+        let currentLang = 'en';
+        let originalTexts = {};
+        let currentTranslateUrl = TRANSLATE_URL;
+
+        // Status display
+        function showStatus(msg, type = 'info') {
+            const status = document.getElementById('status');
+            status.textContent = msg;
+            status.className = `status ${type}`;
+            status.style.display = 'block';
+            setTimeout(() => status.style.display = 'none', 4000);
+        }
+
+        // Capture original texts
+        function captureOriginals() {
+            const ids = ['title', 'subtitle', 'fact1', 'quote', 'fact2', 'fact3', 'list1', 'list2', 'list3'];
+            ids.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) originalTexts[id] = el.textContent.trim();
+            });
+            console.log('✅ Captured texts:', Object.keys(originalTexts));
+        }
+
+        // Single translation with retry logic
+        async function translateText(text, targetLang, retryCount = 0) {
+            if (targetLang === 'en') return text;
+            
+            const urls = [currentTranslateUrl, ...BACKUP_URLS];
+            const url = urls[retryCount % urls.length];
+            
+            try {
+                const response = await fetch(url, {
+                    method: 'POST',
+                    mode: 'cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        q: text,
+                        source: 'en',
+                        target: targetLang,
+                        format: 'text'
+                    })
+                });
+
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                
+                const data = await response.json();
+                return data.translatedText || text;
+                
+            } catch (error) {
+                console.error(`Translation failed on ${url}:`, error);
+                
+                if (retryCount < 2) {
+                    showStatus(`Trying backup server... (${retryCount + 1}/3)`);
+                    await new Promise(r => setTimeout(r, 1000));
+                    return translateText(text, targetLang, retryCount + 1);
+                }
+                
+                showStatus('⚠️ Using English (API temporarily unavailable)', 'error');
+                return text;
+            }
+        }
+
+        // Main language switch
+        async function switchLanguage(newLang) {
+            if (newLang === currentLang) return;
+            
+            showStatus('🔄 Translating content...', 'loading');
+            
+            // Update button
+            document.querySelectorAll('.lang-btn').forEach(btn => 
+                btn.classList.toggle('active', btn.dataset.lang === newLang)
+            );
+
+            // Sequential translation
+            const ids = Object.keys(originalTexts);
+            for (const id of ids) {
+                const el = document.getElementById(id);
+                if (el) {
+                    el.textContent = await translateText(originalTexts[id], langs[newLang]);
+                    await new Promise(r => setTimeout(r, 200)); // Rate limit
+                }
+            }
+
+            currentLang = newLang;
+            showStatus(`✅ Switched to ${newLang.toUpperCase()}!`, 'success');
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            captureOriginals();
+            showStatus('Ready! Click any language button to start.', 'success');
+        });
+
+        // Button listeners
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', () => switchLanguage(btn.dataset.lang));
+        });
+
+        // Debug: Double-click to test API directly
+        document.addEventListener('dblclick', async () => {
+            showStatus('Testing API connection...');
+            const testResult = await translateText('Hello World', 'de');
+            showStatus(`Test: "${testResult}"`, testResult !== 'Hello World' ? 'success' : 'error');
+        });
+    </script>
+</body>
+</html>

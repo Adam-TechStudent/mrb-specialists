@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="MRB Specialists provides Manufacturing Record Book (MRB) services including MRB compilation, gap analysis, correction support, and submission assistance in Pune, Maharashtra, India.">
+    <meta name="keywords"
+        content="MRB specialists, MRB services, Manufacturing Record Book, MRB compilation, MRB gap analysis, Pune, Maharashtra">
+    <meta name="author" content="MRB Specialists">
+    <meta name="robots" content="index, follow">
+
+    <title>MRB About | MRB Specialists </title>
+
+    <!-- Open Graph / Social sharing -->
+    <meta property="og:title" content="MRB Specialists | Manufacturing Record Book Services">
+    <meta property="og:description"
+        content="MRB Specialists provides Manufacturing Record Book (MRB) services including MRB compilation, gap analysis, correction support, and submission assistance.">
+    <meta property="og:url" content="https://yourdomain.com/home_page.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://yourdomain.com/assets/og-image.jpg">
+
+    <!-- DOMAIN ADD HERE UPSIDE -->
+    <!-- Favicon (optional but recommended) -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <title>About Us - MRB Specialists</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            z-index: 999;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 10px 0 auto;
+            padding: 1rem 1rem 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .nav-logo h1 {
+            font-size: 1.8rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: #374151;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            transition: background-color 0.2s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-link:hover {
+            color: #1e40af;
+            background: rgba(59, 130, 246, 0.1);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            gap: 4px;
+        }
+
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 3px;
+            background: #374151;
+            border-radius: 2px;
+        }
+
+        /* ✅ GOOGLE TRANSLATE BUTTON - FIXED & VISIBLE */
+        #google_translate_element {
+            margin-left: 1rem !important;
+            display: inline-block !important;
+            white-space: nowrap !important;
+        }
+
+        .goog-te-gadget {
+            font-family: inherit !important;
+            border: none !important;
+            background: transparent !important;
+            white-space: nowrap !important;
+        }
+
+        .goog-te-combo {
+            background: linear-gradient(135deg, #3b82f6, #1e40af) !important;
+            border: 2px solid #3b82f6 !important;
+            border-radius: 25px !important;
+            padding: 8px 16px !important;
+            color: white !important;
+            font-weight: 600 !important;
+            font-size: 14px !important;
+            cursor: pointer !important;
+            min-width: 90px !important;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3) !important;
+            font-family: inherit !important;
+        }
+
+        .goog-te-combo:hover {
+            background: linear-gradient(135deg, #1e40af, #1e3c72) !important;
+            transform: translateY(-1px) !important;
+        }
+
+        .goog-te-gadget img {
+            display: none !important;
+        }
+
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 120px 20px 40px;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: #1e40af;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+        }
+
+        .section h2 {
+            font-size: 2.2rem;
+            color: #1e40af;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .content-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .services-list {
+            list-style: none;
+        }
+
+        .services-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .services-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .stat {
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+        }
+
+        .stat h3 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .cta {
+            text-align: center;
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            color: white;
+            padding: 3rem;
+            border-radius: 12px;
+            margin-top: 3rem;
+        }
+
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ff8c00;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(255, 140, 0, 0.3);
+        }
+
+        .footer {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>MRB Specialists</h1>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="../home_page/home_page.html" class="nav-link">Home</a>
+                <a href="../service page/service_page.html" class="nav-link">Services</a>
+                <a href="../about_page/about.html" class="nav-link">About</a>
+                <a href="../contact_page/contact.html" class="nav-link">Contact</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <!-- ✅ LANGUAGE BUTTON - NOW VISIBLE -->
+            <div id="google_translate_element"></div>
+        </div>
+    </nav>
+
+
+
+    <div class="container">
+        <!-- What is MRB -->
+        <section class="section">
+            <h2>What is a Manufacturing Record Book?</h2>
+            <div class="content-grid">
+                <div class="content-box">
+                    <p>A Manufacturing Record Book (MRB), also called MDR Quality Dossier, is a structured compilation
+                        of all manufacturing, inspection, and testing records required by clients and third-party
+                        inspectors.</p>
+                    <p><strong>Why it matters:</strong></p>
+                    <ul class="services-list">
+                        <li>Client rejection prevention</li>
+                        <li>FAT clearance acceleration</li>
+                        <li>Payment hold elimination</li>
+                        <li>Project close-out success</li>
+                    </ul>
+                </div>
+                <div class="content-box">
+                    <h3 style="color: #1e40af; margin-bottom: 1rem;">We ensure this never happens</h3>
+                    <p>Our project manager-led documentation guarantees client acceptance from first submission.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Services -->
+        <section class="section">
+            <h2>Our MRB Services</h2>
+            <div class="content-grid">
+                <div class="content-box">
+                    <h3>Complete MRB Compilation</h3>
+                    <ul class="services-list">
+                        <li>MRB cover page & document index</li>
+                        <li>Approved ITP & MTC verification</li>
+                        <li>Welding, NDT documentation</li>
+                        <li>Test records & CoC</li>
+                        <li>As-built drawings & packing docs</li>
+                    </ul>
+                </div>
+                <div class="content-box">
+                    <h3>MRB Gap Analysis & Correction</h3>
+                    <p>Already prepared MRB facing rejection? We:</p>
+                    <ul class="services-list">
+                        <li>Review existing MRB</li>
+                        <li>Identify missing documents</li>
+                        <li>Correct formats per PO standards</li>
+                        <li>Re-compile & resubmit</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats -->
+        <section class="stats">
+            <div class="stat">
+                <h3>100%</h3>
+                <p>Traceability</p>
+            </div>
+            <div class="stat">
+                <h3>0</h3>
+                <p>Rejections</p>
+            </div>
+            <div class="stat">
+                <h3>On-Time</h3>
+                <p>Closures</p>
+            </div>
+        </section>
+
+        <!-- Industries -->
+        <section class="section">
+            <h2>Industries We Support</h2>
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; text-align: center;">
+                <div class="content-box" style="padding: 1.5rem;">
+                    <strong>Valves & Actuators</strong>
+                </div>
+                <div class="content-box" style="padding: 1.5rem;">
+                    <strong>Pumps & Rotating Equipment</strong>
+                </div>
+                <div class="content-box" style="padding: 1.5rem;">
+                    <strong>Skids & Packaged Units</strong>
+                </div>
+                <div class="content-box" style="padding: 1.5rem;">
+                    <strong>Pressure Vessels & Piping</strong>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta">
+            <h2>Ready to Close Your Project Smoothly?</h2>
+            <p>Faster MRB approval • Zero documentation surprises • On-time project closure</p>
+            <a href="../contact_page/contact.html" class="btn">Get MRB Support Today</a>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <h1
+                style="background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-text-fill-color: transparent; margin-bottom: 1rem;">
+                MRB Specialists</h1>
+            <p>Manufacturing Record Book Services | Pune, Maharashtra, India</p>
+            <p style="margin-top: 1rem; color: #9ca3af;">© 2026 All rights reserved | 📧 contact@mrbspecialists.com | 📞
+                +91 98765 43210</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Google Translate, Mobile Menu + Smooth Scroll -->
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,de',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileBtn = document.getElementById('mobileMenuBtn');
+            const navMenu = document.getElementById('navMenu');
+
+            // Toggle mobile menu visibility
+            mobileBtn.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+
+            // Smooth scroll for internal anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const target = this.getAttribute('href');
+                    if (target.length > 1) {
+                        e.preventDefault();
+                        document.querySelector(target).scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                        // close menu on mobile after clicking
+                        if (navMenu.classList.contains('active')) {
+                            navMenu.classList.remove('active');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

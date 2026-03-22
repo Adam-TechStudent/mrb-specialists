@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multilingual Website - Google Translate</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Language Switcher -->
+        <div class="language-switcher">
+            <button class="lang-btn active" data-lang="en">🇬🇧 English</button>
+            <button class="lang-btn" data-lang="de">🇩🇪 Deutsch</button>
+            <button class="lang-btn" data-lang="ja">🇯🇵 日本語</button>
+        </div>
+
+        <!-- Loading Indicator -->
+        <div id="loading" class="loading-indicator hidden">
+            <div class="spinner"></div>
+            <p>Translating with Google Translate...</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <header>
+                <h1>Welcome to Our Multilingual Website</h1>
+                <p>Switch between languages to see the translation in action</p>
+            </header>
+
+            <main>
+                <section class="features">
+                    <div class="feature-card">
+                        <h2>Feature 1: Responsive Design</h2>
+                        <p>This website is built with modern technologies and works perfectly on all devices including phones, tablets, and desktops. The responsive design ensures that users have the best experience regardless of their screen size.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h2>Feature 2: Fast Translation</h2>
+                        <p>Our platform uses advanced artificial intelligence to provide fast and accurate translations. You can switch between languages instantly and see your content translated in real-time without any delays.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h2>Feature 3: Multiple Languages</h2>
+                        <p>Currently supporting English, German, and Japanese, with the ability to expand to more languages in the future. Our multilingual support ensures that your message reaches a global audience effectively.</p>
+                    </div>
+                </section>
+
+                <section class="about">
+                    <h2>About Our Company</h2>
+                    <p>We are a dedicated team of developers and translators committed to breaking language barriers. Our mission is to make information accessible to everyone, regardless of their native language. We believe that technology should connect people, not divide them. With our innovative translation solutions, we help businesses and individuals communicate effectively across different cultures and languages.</p>
+                </section>
+
+                <section class="services">
+                    <h2>Our Services</h2>
+                    <ul class="services-list">
+                        <li>Real-time website translation powered by Google Translate AI</li>
+                        <li>Support for multiple language pairs and dialects</li>
+                        <li>Fast and reliable translation API integration</li>
+                        <li>Caching system to optimize performance and reduce API calls</li>
+                        <li>Easy implementation for developers of all skill levels</li>
+                        <li>Professional translation service backed by Google</li>
+                    </ul>
+                </section>
+
+                <section class="contact">
+                    <h2>Contact Us</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="Enter your email address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" placeholder="Type your message here" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </section>
+            </main>
+
+            <footer>
+                <p>© 2026 Multilingual Website. All rights reserved. | Powered by Google Translate</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
