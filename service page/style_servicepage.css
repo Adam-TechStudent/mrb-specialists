@@ -5,21 +5,6 @@
         }
 
 
-        /* ADD THIS ENTIRE BLOCK */
-        .VIpgJd-yAWNEb-hvhgNd,
-        .goog-te-gadget-icon,
-        .VIpgJd-ZVi9od-ORHb-OEVmcd,
-        .goog-te-banner-frame.skiptranslate,
-        iframe[src*="translate.google"],
-        iframe[src*="googleapis"] {
-            display: none !important;
-            visibility: hidden !important;
-            height: 0 !important;
-            width: 0 !important;
-        }
-
-
-
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
@@ -105,13 +90,27 @@
         }
 
 
+
         /* Language Menu */
-        .lang-menu {
-            position: relative;
+
+
+        /* ADD THIS ENTIRE BLOCK */
+        .VIpgJd-yAWNEb-hvhgNd,
+        .goog-te-gadget-icon,
+        .VIpgJd-ZVi9od-ORHb-OEVmcd,
+        .goog-te-banner-frame.skiptranslate,
+        iframe[src*="translate.google"],
+        iframe[src*="googleapis"] {
+            display: none !important;
+            visibility: hidden !important;
+            height: 0 !important;
+            width: 0 !important;
         }
 
 
-
+        .lang-menu {
+            position: relative;
+        }
 
         .lang-flag {
             display: inline-block;
