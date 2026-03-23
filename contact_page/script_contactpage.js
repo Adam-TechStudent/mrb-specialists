@@ -3,14 +3,14 @@
 
 (function () {
     // Replace with your EmailJS PUBLIC_KEY from dashboard.emailjs.com/admin/account
-    emailjs.init("MxB2oxdEYhvBErbwX");
+    emailjs.init("z3tFfQYfVIky0yMBa");
 })();
 
 window.onload = function () {
     document.getElementById('contact-form').addEventListener('submit', function (event) {
         event.preventDefault();
         // Replace SERVICE_ID, TEMPLATE_ID from your EmailJS dashboard
-        emailjs.sendForm('service_fzb76fm', 'template_mp1q6tp', this)
+        emailjs.sendForm('service_eozp8gf', 'template_3myuxra', this)
             .then(function () {
                 document.getElementById('success').style.display = 'block';
                 document.getElementById('error').style.display = 'none';
