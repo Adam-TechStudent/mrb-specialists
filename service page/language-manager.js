@@ -265,36 +265,6 @@ window.addEventListener('load', () => {
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // ========================
 // GOOGLE TRANSLATE HELPER FUNCTION
 // ========================
