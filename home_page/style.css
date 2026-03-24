@@ -13,6 +13,65 @@
             background: #f8f9fa;
         }
 
+
+        /* style for social media links */
+
+        .socialmedia {
+            position: fixed;
+            top: 190px;
+            left: 0;
+            z-index: 9999;
+            background-color: #547cff;
+            color: white;
+            padding: 10px 5px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        #socialLinks {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            margin-right: 10px;
+        }
+
+        .social-link {
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 25px;
+            height: 25px;
+            background-color: black;
+            border-radius: 8px;
+            font-size: 12px;
+            transition: all 0.3s ease;
+        }
+
+
+        #followText {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            font-size: 14px;
+            font-weight: bold
+        }
+
+
+
+
+
+
+
+
+
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -92,7 +151,7 @@
 
 
         /* Language Menu */
- 
+
         /* ADD THIS ENTIRE BLOCK */
         .VIpgJd-yAWNEb-hvhgNd,
         .goog-te-gadget-icon,
