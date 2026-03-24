@@ -103,67 +103,8 @@ iframe[src*="googleapis"] {
 }
 
 
-.lang-menu {
-    position: relative;
-}
 
-.lang-flag {
-    display: inline-block;
-    width: 32px;
-    height: 24px;
-    background-size: cover;
-    border-radius: 2px;
-}
 
-.lang-menu ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    background-color: #fff;
-    border: 1px solid var(--border-light);
-    box-shadow: var(--shadow);
-    border-radius: 5px;
-    display: none;
-    position: absolute;
-    top: 45px;
-    right: 0;
-    z-index: 100;
-    min-width: 150px;
-}
-
-.lang-menu:hover ul,
-.lang-menu:focus-within ul {
-    display: block;
-}
-
-.lang-menu ul li {
-    list-style: none;
-}
-
-.lang-menu ul li a {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px 12px;
-    color: #333;
-    text-decoration: none;
-    transition: var(--transition);
-    font-size: 14px;
-}
-
-.lang-menu ul li a:hover,
-.lang-menu ul li a:focus {
-    background-color: var(--light-gray);
-    outline: none;
-}
-
-.lang-flag-menu {
-    width: 28px;
-    height: 21px;
-    background-size: cover;
-    border-radius: 2px;
-    flex-shrink: 0;
-}
 
 /* Responsive */
 @media (max-width: 768px) {
