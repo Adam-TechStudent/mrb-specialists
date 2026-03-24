@@ -74,11 +74,12 @@ body {
     background: #f8f9fa;
     border-bottom: 2px solid #e9ecef;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    width: 100%;
 }
 
 .lang-btn {
-    padding: 10px 20px;
+    padding: 12px 30px;
     border: 2px solid #667eea;
     background: white;
     color: #667eea;
@@ -87,6 +88,7 @@ body {
     font-weight: bold;
     transition: all 0.3s ease;
     font-size: 14px;
+    flex: 1;
 }
 
 .lang-btn:hover {
