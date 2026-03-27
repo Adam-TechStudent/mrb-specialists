@@ -1,3 +1,34 @@
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // ✅ FORCE close menu on load/resize
+    const menu = document.querySelector('.mobile-dropdown-menu');
+    if (menu) {
+        menu.classList.remove('active'); // Kill any existing active class
+    }
+    
+    const toggleBtn = document.querySelector('.drop-toggle');
+    const menu2 = document.querySelector('.mobile-dropdown-menu');
+    
+    if (toggleBtn && menu2) {
+        toggleBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            menu2.classList.toggle('active');
+        });
+    }
+    
+    // Close on window resize (DevTools fix)
+    window.addEventListener('resize', function() {
+        if (menu2) menu2.classList.remove('active');
+    });
+});
+
+
+
+
+
 // ========================
 // HIDE GOOGLE TRANSLATE POPUP BAR
 // ========================
