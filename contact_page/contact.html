@@ -30,7 +30,7 @@
 
     <link rel="stylesheet" href="style_contactpage.css">
 
-     <!-- ✅ Google Translate Script - HTTPS -->
+    <!-- ✅ Google Translate Script - HTTPS -->
     <script type="text/javascript"
         src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
@@ -41,8 +41,7 @@
 <body>
 
     <!-- Social Media Label Section -->
-    <div  class="socialmedia"
-        onmouseover="document.getElementById('socialLinks').style.display='flex';"
+    <div class="socialmedia" onmouseover="document.getElementById('socialLinks').style.display='flex';"
         onmouseout="document.getElementById('socialLinks').style.display='none';">
 
         <!-- Social Icons (hidden by default, visible on hover) -->
@@ -69,6 +68,22 @@
         <!-- Navigation -->
         <nav class="navbar">
             <div class="nav-container">
+
+
+                <!-- Mobile Nav (Dropdown box for mobile screens) -->
+                <div class="mobile-nav">
+                    <div class="drop-down">
+                        <button class="drop-toggle">☰</button>
+                        <ul class="mobile-dropdown-menu">
+                            <li><a href="../home_page/index.html">Home</a></li>
+                            <li><a href="../service page/service_page.html">Services</a></li>
+                            <li><a href="../about_page/about.html">About</a></li>
+                            <li><a href="../contact_page/contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
                 <div class="nav-logo">
                     <h1>MRB Specialists</h1>
                 </div>
@@ -78,13 +93,12 @@
                     <a href="../about_page/about.html" class="nav-link">About</a>
                     <a href="../contact_page/contact.html" class="nav-link">Contact</a>
                 </div>
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+
+
                 <!-- ✅ LANGUAGE BUTTON - NOW VISIBLE -->
-                <div id="google_translate_element"></div>
+                <div class="translate-container">
+                    <div id="google_translate_element"></div>
+                </div>
             </div>
         </nav>
 
@@ -97,11 +111,11 @@
             <input type="text" name="user_name" placeholder="Your Name" required>
             <input type="email" name="user_email" placeholder="Your Email" required>
             <select name="service_type" required>
-                <option value="">Select Service</option>
-                <option value="Complete MRB Compilation">Complete MRB Compilation</option>
-                <option value="MRB Gap Analysis & Correction">MRB Gap Analysis & Correction</option>
-                <option value="Submission Support">Submission Support</option>
-                <option value="Other Inquiry">Other Inquiry</option>
+                <option class="one" value="">Select Service</option>
+                <option class="one" value="Complete MRB Compilation">Complete MRB Compilation</option>
+                <option class="one" value="MRB Gap Analysis & Correction">MRB Gap Analysis & Correction</option>
+                <option class="one" value="Submission Support">Submission Support</option>
+                <option class="one" value="Other Inquiry">Other Inquiry</option>
             </select>
             <textarea name="message" rows="6" placeholder="Describe your MRB requirements or project details..."
                 required></textarea>
@@ -113,15 +127,16 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-content">
-            <h1>MRB Specialists</h1>
-            <p>Manufacturing Record Book Services | Pune, Maharashtra, India</p>
+        <div class="container-footer">
+            <div class="footer-content">
+                <h1>MRB Specialists</h1>
+                <p>Manufacturing Record Book Services | Pune, Maharashtra, India</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 All rights reserved.</p>
+                <p>📧 mrbspecialist@gmail.com | 📞 +91 90960 08355</p>
+            </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 All rights reserved.</p>
-            <p>📧 mrbspecialist@gmail.com | 📞 +91 90960 08355</p>
-        </div>
-
     </footer>
 
     <script src="script_contactpage.js"></script>
